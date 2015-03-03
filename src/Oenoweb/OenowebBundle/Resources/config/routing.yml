@@ -1,3 +1,8 @@
 oenoweb_homepage:
-    path:     /hello/{name}
+    path:     /hello
     defaults: { _controller: OenowebBundle:Default:index }
+
+
+test:
+    path:     /test
+    defaults: { _controller: OenowebBundle:Test:ajout }
