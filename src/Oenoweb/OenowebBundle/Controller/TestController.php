@@ -1,6 +1,5 @@
 <?php
-
-namespace Oenoweb\OenowebBundle\Controller;
+namespace Utilisateurs\UtilisateursBundle\Entity;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Oenoweb\OenowebBundle\Entity\Vins;
