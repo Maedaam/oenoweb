@@ -1,7 +1,12 @@
 Oenoweb
 ========================
 
+<<<<<<< HEAD
 Welcome to Oenoweb
+=======
+Welcome to Oenoweb, a fully-functional Symfony2
+application that you can use as the skeleton for your new applications.
+>>>>>>> master
 
 What's inside?
 --------------
@@ -49,9 +54,9 @@ It comes pre-configured with the following bundles:
   * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
     capabilities
 
-  * **FOSUserBundle** - Adds users management
+  * **FOSUserBundle** - Adds user management
 
-  * **FOSRestBundle** - Adds Rest API management
+  * **FOSRestBundle** - Adds Rest api management
 
 Enjoy!
 
