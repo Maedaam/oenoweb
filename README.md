@@ -1,16 +1,12 @@
-Symfony Standard Edition
+Oenoweb
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
-
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Welcome to Oenoweb
 
 What's inside?
 --------------
 
-The Symfony Standard Edition is configured with the following defaults:
+Oenoweb is configured with the following defaults:
 
   * An AppBundle you can use to start coding;
 
@@ -53,8 +49,9 @@ It comes pre-configured with the following bundles:
   * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
     capabilities
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
+  * **FOSUserBundle** - Adds users management
+
+  * **FOSRestBundle** - Adds Rest API management
 
 Enjoy!
 
