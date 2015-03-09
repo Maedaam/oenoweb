@@ -1,0 +1,3 @@
+test_exo1_homepage:
+    path:     /Test/hello/{name}/{prenom}
+    defaults: { _controller: TestExo1Bundle:Default:index }
