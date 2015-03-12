@@ -28,7 +28,7 @@ framework:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: Utilisateurs\UtilisateursBundle\Entity\Utilisateurs
+    user_class: Oenoweb\OenowebBundle\Entity\Users
 
 fos_rest:
     param_fetcher_listener: true

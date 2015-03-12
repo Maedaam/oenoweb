@@ -86,7 +86,7 @@ class Vins
     /**
      * Set domaine
      *
-     * @param integer $domaine
+     * @param string $domaine
      * @return Vins
      */
     public function setDomaine($domaine)

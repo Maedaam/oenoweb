@@ -1,6 +1,6 @@
 <?php
 
-namespace Oenoweb\OenowebBundle\Entity;
+namespace Oenoweb\OenowebBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

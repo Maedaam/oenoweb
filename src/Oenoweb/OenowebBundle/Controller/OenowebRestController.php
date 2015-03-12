@@ -8,7 +8,10 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 class OenowebRestController extends Controller
 {
   public function getUserAction($username){
-    $user = $this->getRepository('UserBundle:User')->findOneByUsername($username);
+    $user = $this->getDoctrine()
+    ->getRepository('OenowebBundle:Users')
+    ->findOneByUsername($username);
+    
     if(!is_object($user)){
       throw $this->createNotFoundException();
     }

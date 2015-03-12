@@ -2,8 +2,8 @@ test_exo1:
     resource: "@TestExo1Bundle/Resources/config/routing.yml"
     prefix:   /
 
-utilisateurs:
-    resource: "@UtilisateursBundle/Resources/config/routing.yml"
+users:
+    resource: "@OenowebBundle/Resources/config/routing.yml"
     prefix:   /
 
 oenoweb:

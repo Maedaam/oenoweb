@@ -4,5 +4,9 @@ oenoweb_homepage:
 
 
 test:
-    path:     /test
-    defaults: { _controller: OenowebBundle:Test:ajout }
+    path:     /create
+    defaults: { _controller: OenowebBundle:Test:create }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
