@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Oenoweb\OenowebBundle\OenowebBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Utilisateurs\UtilisateursBundle\UtilisateursBundle(),
+            new Test\Bundle\Exo1Bundle\TestExo1Bundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -35,5 +36,10 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+    }
+
+    public function init() {
+        date_default_timezone_set( 'Europe/Lisbon' );
+        parent::init();
     }
 }
