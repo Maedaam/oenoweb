@@ -13,3 +13,8 @@ oenoweb:
 app:
     resource: @AppBundle/Controller/
     type:     annotation
+
+rest: 
+    type : rest
+    resource : "routing_rest.yml"
+    prefix : /api

@@ -1,0 +1,4 @@
+users : 
+  type : rest
+  resource :     "OenowebBundle:OenowebRest"
+  name_prefix :  api_
