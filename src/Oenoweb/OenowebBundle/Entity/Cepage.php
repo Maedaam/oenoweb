@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Cepage
  *
- * @ORM\Table("cepage")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\CepageRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\CepageRepository")
  */
 class Cepage
 {
@@ -24,7 +24,7 @@ class Cepage
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=50)
+     * @ORM\Column(name="nom", type="string", length=40)
      */
     private $nom;
 

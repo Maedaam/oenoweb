@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Vins
  *
- * @ORM\Table("vins")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\VinsRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\VinsRepository")
  */
 class Vins
 {
@@ -29,25 +29,25 @@ class Vins
     private $nom;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="domaine", type="integer")
+     * @ORM\Column(name="region", type="string", length=30)
+     */
+    private $region;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="domaine", type="string", length=50)
      */
     private $domaine;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="couleur", type="integer")
+     * @ORM\Column(name="couleur", type="string", length=20)
      */
     private $couleur;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="region", type="integer")
-     */
-    private $region;
 
 
     /**
@@ -84,6 +84,29 @@ class Vins
     }
 
     /**
+     * Set region
+     *
+     * @param string $region
+     * @return Vins
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    /**
+     * Get region
+     *
+     * @return string 
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
      * Set domaine
      *
      * @param string $domaine
@@ -99,7 +122,7 @@ class Vins
     /**
      * Get domaine
      *
-     * @return integer 
+     * @return string 
      */
     public function getDomaine()
     {
@@ -109,7 +132,7 @@ class Vins
     /**
      * Set couleur
      *
-     * @param integer $couleur
+     * @param string $couleur
      * @return Vins
      */
     public function setCouleur($couleur)
@@ -122,33 +145,10 @@ class Vins
     /**
      * Get couleur
      *
-     * @return integer 
+     * @return string 
      */
     public function getCouleur()
     {
         return $this->couleur;
-    }
-
-    /**
-     * Set region
-     *
-     * @param integer $region
-     * @return Vins
-     */
-    public function setRegion($region)
-    {
-        $this->region = $region;
-
-        return $this;
-    }
-
-    /**
-     * Get region
-     *
-     * @return integer 
-     */
-    public function getRegion()
-    {
-        return $this->region;
     }
 }
