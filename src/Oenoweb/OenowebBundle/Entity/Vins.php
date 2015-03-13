@@ -49,6 +49,13 @@ class Vins
      */
     private $couleur;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="aoc", type="string" , length=40)
+     */
+    private $aoc;
+
 
     /**
      * Get id
@@ -150,5 +157,28 @@ class Vins
     public function getCouleur()
     {
         return $this->couleur;
+    }
+
+    /**
+     * Set aoc
+     *
+     * @param string $aoc
+     * @return Vins
+     */
+    public function setAoc($aoc)
+    {
+        $this->aoc = $aoc;
+
+        return $this;
+    }
+
+    /**
+     * Get aoc
+     *
+     * @return string 
+     */
+    public function getaoc()
+    {
+        return $this->aoc;
     }
 }

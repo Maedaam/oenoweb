@@ -2,3 +2,9 @@ users :
   type : rest
   resource :     "OenowebBundle:OenowebRest"
   name_prefix :  api_
+
+
+vins : 
+  type : rest
+  resource :     "OenowebBundle:VinsRegionRest"
+  name_prefix :  api_
