@@ -4,7 +4,17 @@ users :
   name_prefix :  api_
 
 
-vins : 
+region : 
   type : rest
   resource :     "OenowebBundle:VinsRegionRest"
+  name_prefix :  api_
+
+aoc : 
+  type : rest
+  resource :     "OenowebBundle:VinsAocRest"
+  name_prefix :  api_
+
+domaine : 
+  type : rest
+  resource :     "OenowebBundle:VinsDomaineRest"
   name_prefix :  api_
