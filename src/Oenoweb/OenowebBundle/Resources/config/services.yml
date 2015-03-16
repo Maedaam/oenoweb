@@ -2,3 +2,12 @@ services:
 #    oenoweb.example:
 #        class: Oenoweb\OenowebBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+  wsse.security.authentication.provider:
+    class:  Oenoweb/OenowebBundle\Security\Authentication\Provider\WsseProvider
+    arguments: ['', %kernel.cache_dir%/security/nonces]
+
+  wsse.security.authentication.listener:
+    class:  Oenoweb/OenowebBundle\Security\Firewall\WsseListener
+    arguments: ["@security.context", "@security.authentication.manager","@logger"]
+    tags: 
+      - { name: monolog.logger, channel: wsse }
