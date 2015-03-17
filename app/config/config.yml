@@ -30,6 +30,9 @@ fos_user:
     firewall_name: main
     user_class: Oenoweb\OenowebBundle\Entity\Users
 
+escape_wsse_authentication:
+    authentication_provider_class: Oenoweb\OenowebBundle\Security\Core\Authentication\Provider\Provider
+
 fos_rest:
     param_fetcher_listener: true
     body_listener: true
