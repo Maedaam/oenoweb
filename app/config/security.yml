@@ -15,15 +15,6 @@ security:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
             security: false
 
-        wsse_secured:
-            wsse:
-                realm: "Secured Api"
-                profile: "UsernameToken"
-                lifetime: 300
-                encoder:
-                    algorithm: sha1
-            anonymous: false
-            provider: fos_userbundle
         main:
             pattern: ^/
             form_login:
