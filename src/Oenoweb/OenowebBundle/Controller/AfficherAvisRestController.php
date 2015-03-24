@@ -7,20 +7,18 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
 
 
-class VinsDomaineRestController extends Controller
+class AfficherAvisRestController extends Controller
 {
-  public function getListDomaineAction($region , $paoc){
+  public function getLiCommentaireAction($idVin){
   $em=$this->getDoctrine()->getManager();
 
   $query = $em->createQuery(
-  'SELECT distinct a.domaine
-  FROM OenowebBundle:Vins a
-  WHERE a.region  = :parametre AND a.aoc = :parametre2
-  ORDER BY a.domaine ASC'
-  )->setParameters(array(
-      'parametre' => $region,
-      'parametre2' => $paoc,
-      ));
+  'SELECT distinct a , b.username
+  FROM OenowebBundle:Avis a,  OenowebBundle:Users b
+  WHERE a.idVin = :parametre 
+  AND a.idUser = b.id
+  ORDER BY a.commentaire ASC'
+  )->setParameter('parametre' , $idVin );
 
   	$listelement = $query->getResult(); 
 
