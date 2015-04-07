@@ -45,3 +45,8 @@ vins :
   type : rest
   resource :     "OenowebBundle:VinsRest"
   name_prefix :  api_
+
+avis3 : 
+  type : rest
+  resource :     "OenowebBundle:AfficherAvisUserRest"
+  name_prefix :  api_
