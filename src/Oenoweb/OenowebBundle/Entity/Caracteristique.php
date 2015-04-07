@@ -5,12 +5,12 @@ namespace Oenoweb\OenowebBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Region
+ * Caracteristique
  *
- * @ORM\Table("region")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\RegionRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\CaracteristiqueRepository")
  */
-class Region
+class Caracteristique
 {
     /**
      * @var integer
@@ -24,7 +24,7 @@ class Region
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=50)
+     * @ORM\Column(name="nom", type="string", length=30)
      */
     private $nom;
 
@@ -43,7 +43,7 @@ class Region
      * Set nom
      *
      * @param string $nom
-     * @return Region
+     * @return Caracteristique
      */
     public function setNom($nom)
     {

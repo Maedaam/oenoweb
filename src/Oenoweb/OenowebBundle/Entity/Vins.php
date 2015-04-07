@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Vins
  *
- * @ORM\Table("vins")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\VinsRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\VinsRepository")
  */
 class Vins
 {
@@ -29,25 +29,32 @@ class Vins
     private $nom;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="domaine", type="integer")
+     * @ORM\Column(name="region", type="string", length=30)
+     */
+    private $region;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="domaine", type="string", length=50)
      */
     private $domaine;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="couleur", type="integer")
+     * @ORM\Column(name="couleur", type="string", length=20)
      */
     private $couleur;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="region", type="integer")
+     * @ORM\Column(name="aoc", type="string" , length=40)
      */
-    private $region;
+    private $aoc;
 
 
     /**
@@ -84,55 +91,9 @@ class Vins
     }
 
     /**
-     * Set domaine
-     *
-     * @param integer $domaine
-     * @return Vins
-     */
-    public function setDomaine($domaine)
-    {
-        $this->domaine = $domaine;
-
-        return $this;
-    }
-
-    /**
-     * Get domaine
-     *
-     * @return integer 
-     */
-    public function getDomaine()
-    {
-        return $this->domaine;
-    }
-
-    /**
-     * Set couleur
-     *
-     * @param integer $couleur
-     * @return Vins
-     */
-    public function setCouleur($couleur)
-    {
-        $this->couleur = $couleur;
-
-        return $this;
-    }
-
-    /**
-     * Get couleur
-     *
-     * @return integer 
-     */
-    public function getCouleur()
-    {
-        return $this->couleur;
-    }
-
-    /**
      * Set region
      *
-     * @param integer $region
+     * @param string $region
      * @return Vins
      */
     public function setRegion($region)
@@ -145,10 +106,79 @@ class Vins
     /**
      * Get region
      *
-     * @return integer 
+     * @return string 
      */
     public function getRegion()
     {
         return $this->region;
+    }
+
+    /**
+     * Set domaine
+     *
+     * @param string $domaine
+     * @return Vins
+     */
+    public function setDomaine($domaine)
+    {
+        $this->domaine = $domaine;
+
+        return $this;
+    }
+
+    /**
+     * Get domaine
+     *
+     * @return string 
+     */
+    public function getDomaine()
+    {
+        return $this->domaine;
+    }
+
+    /**
+     * Set couleur
+     *
+     * @param string $couleur
+     * @return Vins
+     */
+    public function setCouleur($couleur)
+    {
+        $this->couleur = $couleur;
+
+        return $this;
+    }
+
+    /**
+     * Get couleur
+     *
+     * @return string 
+     */
+    public function getCouleur()
+    {
+        return $this->couleur;
+    }
+
+    /**
+     * Set aoc
+     *
+     * @param string $aoc
+     * @return Vins
+     */
+    public function setAoc($aoc)
+    {
+        $this->aoc = $aoc;
+
+        return $this;
+    }
+
+    /**
+     * Get aoc
+     *
+     * @return string 
+     */
+    public function getaoc()
+    {
+        return $this->aoc;
     }
 }

@@ -19,8 +19,9 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Oenoweb\OenowebBundle\OenowebBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Utilisateurs\UtilisateursBundle\UtilisateursBundle(),
             new Test\Bundle\Exo1Bundle\TestExo1Bundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
