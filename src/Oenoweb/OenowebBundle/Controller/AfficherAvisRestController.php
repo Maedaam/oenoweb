@@ -9,7 +9,7 @@ use FOS\RestBundle\Controller\Annotations\RouteResource;
 
 class AfficherAvisRestController extends Controller
 {
-  public function getLiCommentaireAction($idVin){
+  public function getListCommentaireAction($idVin){
   $em=$this->getDoctrine()->getManager();
 
   $query = $em->createQuery(
