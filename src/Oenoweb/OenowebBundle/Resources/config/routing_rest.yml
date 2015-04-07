@@ -40,3 +40,8 @@ favoris :
   name_prefix :  api_
   requirements :
      _method: POST|GET
+
+vins :
+  type : rest
+  resource :     "OenowebBundle:VinsRest"
+  name_prefix :  api_

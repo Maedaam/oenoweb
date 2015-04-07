@@ -4,6 +4,7 @@ namespace Oenoweb\OenowebBundle\Controller;
 use FOS\RestBundle\Controller\Annotations\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use FOS\RestBundle\Controller\Annotations\RouteResource;
 
 class VinsRegionRestController extends Controller
 {
