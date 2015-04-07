@@ -11,7 +11,7 @@ class VinsRegionRestController extends Controller
   $em=$this->getDoctrine()->getManager();
 
   $query = $em->createQuery(
-  'SELECT distinct a.region
+  'SELECT distinct a.id , a.region
   FROM OenowebBundle:Vins a
   ORDER BY a.region ASC'
 

@@ -2,8 +2,7 @@ users :
   type : rest
   resource :     "OenowebBundle:OenowebRest"
   name_prefix :  api_
-  requirements:
-     _scheme:  https
+  
 
 
 region : 
@@ -26,10 +25,14 @@ avis :
   resource :     "OenowebBundle:AfficherAvisRest"
   name_prefix :  api_
 
-avis : 
+
+avis2 : 
   type : rest
-  resource :     "OenowebBundle:PosterUnAvisRestRest"
+  resource :     "OenowebBundle:AvisPostRest"
   name_prefix :  api_
+  requirements :
+     _method: POST|GET
+
 
 favoris :
   type : rest

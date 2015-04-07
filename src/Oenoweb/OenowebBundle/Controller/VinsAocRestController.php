@@ -12,10 +12,10 @@ class VinsAocRestController extends Controller
   $em=$this->getDoctrine()->getManager();
 
   $query = $em->createQuery(
-  'SELECT distinct a.aoc
+  'SELECT distinct a.id , a.aoc
   FROM OenowebBundle:Vins a
   WHERE a.region = :parametre
-  ORDER BY a.aoc ASC'
+  ORDER BY a.id  ASC'
   )->setParameter('parametre' , $region );
 
   	$listelement = $query->getResult(); 

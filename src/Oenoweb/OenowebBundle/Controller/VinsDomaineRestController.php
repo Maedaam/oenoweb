@@ -13,7 +13,7 @@ class VinsDomaineRestController extends Controller
   $em=$this->getDoctrine()->getManager();
 
   $query = $em->createQuery(
-  'SELECT distinct a.domaine
+  'SELECT distinct a.id , a.domaine
   FROM OenowebBundle:Vins a
   WHERE a.region  = :parametre AND a.aoc = :parametre2
   ORDER BY a.domaine ASC'
