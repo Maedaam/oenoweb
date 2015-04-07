@@ -7,19 +7,20 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
 use Symfony\Component\HttpFoundation\Response;
-use Oenoweb\OenowebBundle\Entity\Favoris;
-use Oenoweb\OenowebBundle\Form\FavorisType;
-#src/Oenoweb/OenowebBundle/Controller/FavorisPostController.php
+use Oenoweb\OenowebBundle\Entity\Avis;
+use Oenoweb\OenowebBundle\Form\AvisType;
+#src/Oenoweb/OenowebBundle/Controller/AvisPostRestController.php
 /**
  * Collection post action
  * @var Request $request
  * @return View|array
  */
-class FavorisPostRestController extends Controller  {
-public function postFavorisAction(Request $request)
+class AvisPostRestController extends Controller  {
+
+public function postAvisAction(Request $request)
 {
-    $entity = new Favoris();
-    $form = $this->createForm(new FavorisType(), $entity);
+    $entity = new Avis();
+    $form = $this->createForm(new AvisType(), $entity);
     $form->bind($request);
 
     if ($form->isValid()) {
