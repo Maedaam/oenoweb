@@ -57,19 +57,20 @@ class RechercheDidactiqueRestController extends Controller {
 	    return $listelement;
 	}
 
-	public function getRegionAocDomaineAction($pregion, $paoc, $pdomaine){
+
+	public function getRegionAocDomaineAction($region, $aoc, $domaine){
 		$em=$this->getDoctrine()->getManager();
 
 		$query = $em->createQuery(
-		'SELECT OenowebBundle:Vins
-		FROM OenowebBundle:Vins
+		'SELECT distinct a
+		FROM OenowebBundle:Vins a
 		WHERE a.region  = :parametre1
 		AND a.aoc = :parametre2
 		AND a.domaine = :parametre3'
 		)->setParameters(array(
-    		'parametre1' => $pregion,
-    		'parametre2' => $paoc,
-    		'parametre3' => $pdomaine,
+    		'parametre1' => $region,
+    		'parametre2' => $aoc,
+    		'parametre3' => $domaine,
     		));
 
   		$listelement = $query->getResult(); 
