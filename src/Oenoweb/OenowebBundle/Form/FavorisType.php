@@ -5,6 +5,8 @@ namespace Oenoweb\OenowebBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Oenoweb\OenowebBundle\Entity\Favoris;
+
 
 class FavorisType extends AbstractType
 {
@@ -27,7 +29,7 @@ class FavorisType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'Oenoweb\OenowebBundle\Entity\Favoris'
-            'csrf_protection' => false
+           // 'csrf_protection' => false
         ));
     }
 

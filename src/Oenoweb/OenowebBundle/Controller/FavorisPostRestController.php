@@ -1,10 +1,21 @@
 <?php
+namespace Oenoweb\OenowebBundle\Controller;
+
+use FOS\RestBundle\Controller\Annotations\View;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use FOS\RestBundle\Controller\Annotations\RouteResource;
+use Symfony\Component\HttpFoundation\Response;
+use Oenoweb\OenowebBundle\Entity\Favoris;
+use Oenoweb\OenowebBundle\Form\FavorisType;
 #src/Oenoweb/OenowebBundle/Controller/FavorisPostController.php
 /**
  * Collection post action
  * @var Request $request
  * @return View|array
  */
+class FavorisPostRestController extends Controller  {
 public function cpostAction(Request $request)
 {
     $entity = new Favoris();
@@ -28,4 +39,5 @@ public function cpostAction(Request $request)
     return array(
         'form' => $form,
     );
+}
 }

@@ -30,3 +30,10 @@ avis :
   type : rest
   resource :     "OenowebBundle:PosterUnAvisRestRest"
   name_prefix :  api_
+
+favoris :
+  type : rest
+  resource :     "OenowebBundle:FavorisPostRest"
+  name_prefix :  api_
+  requirements :
+     _method: POST|GET
