@@ -30,3 +30,8 @@ avis :
   type : rest
   resource :     "OenowebBundle:PosterUnAvisRestRest"
   name_prefix :  api_
+
+favoris :
+  type : rest
+  pattern:  /
+  defaults: { _controller: OenowebBundle:FavorisRest:post }
