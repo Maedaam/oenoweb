@@ -41,4 +41,4 @@ favoris :
 vins :
   type : rest
   resource :     "OenowebBundle:VinsRest"
-  name_prefix :  api_  
+  name_prefix :  api_
