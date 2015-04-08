@@ -58,6 +58,15 @@ class Vins
 
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="photoVins", type="string"  ,length=130, options={"default" = "https://scontent-cdg.xx.fbcdn.net/hphotos-frc3/t31.0-8/903790_4932022263693_683318828_o.jpg" })
+     */
+    private $photoVins; 
+
+
+
+    /**
      * Get id
      *
      * @return integer 
@@ -88,6 +97,30 @@ class Vins
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set photoVins
+     *
+     * @param string $photoVins
+     * @return Vins
+     */
+    public function setphotoVins($photoVins)
+    {
+        $this->photoVins = $photoVins;
+
+        return $this;
+    }
+
+    /**
+     * Get photoVins
+     *
+     * @return string 
+     */
+    public function getPhotoVins()
+    {
+        return $this->photoVins;
+
     }
 
     /**
