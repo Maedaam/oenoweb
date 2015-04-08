@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Vins
  *
- * @ORM\Table("vins")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\VinsRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\VinsRepository")
  */
 class Vins
 {
@@ -29,25 +29,41 @@ class Vins
     private $nom;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="domaine", type="integer")
+     * @ORM\Column(name="region", type="string", length=30)
+     */
+    private $region;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="domaine", type="string", length=50)
      */
     private $domaine;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="couleur", type="integer")
+     * @ORM\Column(name="couleur", type="string", length=20)
      */
     private $couleur;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="region", type="integer")
+     * @ORM\Column(name="aoc", type="string" , length=40)
      */
-    private $region;
+    private $aoc;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photoVins", type="string"  ,length=130, options={"default" = "https://scontent-cdg.xx.fbcdn.net/hphotos-frc3/t31.0-8/903790_4932022263693_683318828_o.jpg" })
+     */
+    private $photoVins; 
+
 
 
     /**
@@ -84,55 +100,33 @@ class Vins
     }
 
     /**
-     * Set domaine
+     * Set photoVins
      *
-     * @param integer $domaine
+     * @param string $photoVins
      * @return Vins
      */
-    public function setDomaine($domaine)
+    public function setphotoVins($photoVins)
     {
-        $this->domaine = $domaine;
+        $this->photoVins = $photoVins;
 
         return $this;
     }
 
     /**
-     * Get domaine
+     * Get photoVins
      *
-     * @return integer 
+     * @return string 
      */
-    public function getDomaine()
+    public function getPhotoVins()
     {
-        return $this->domaine;
-    }
+        return $this->photoVins;
 
-    /**
-     * Set couleur
-     *
-     * @param integer $couleur
-     * @return Vins
-     */
-    public function setCouleur($couleur)
-    {
-        $this->couleur = $couleur;
-
-        return $this;
-    }
-
-    /**
-     * Get couleur
-     *
-     * @return integer 
-     */
-    public function getCouleur()
-    {
-        return $this->couleur;
     }
 
     /**
      * Set region
      *
-     * @param integer $region
+     * @param string $region
      * @return Vins
      */
     public function setRegion($region)
@@ -145,10 +139,79 @@ class Vins
     /**
      * Get region
      *
-     * @return integer 
+     * @return string 
      */
     public function getRegion()
     {
         return $this->region;
+    }
+
+    /**
+     * Set domaine
+     *
+     * @param string $domaine
+     * @return Vins
+     */
+    public function setDomaine($domaine)
+    {
+        $this->domaine = $domaine;
+
+        return $this;
+    }
+
+    /**
+     * Get domaine
+     *
+     * @return string 
+     */
+    public function getDomaine()
+    {
+        return $this->domaine;
+    }
+
+    /**
+     * Set couleur
+     *
+     * @param string $couleur
+     * @return Vins
+     */
+    public function setCouleur($couleur)
+    {
+        $this->couleur = $couleur;
+
+        return $this;
+    }
+
+    /**
+     * Get couleur
+     *
+     * @return string 
+     */
+    public function getCouleur()
+    {
+        return $this->couleur;
+    }
+
+    /**
+     * Set aoc
+     *
+     * @param string $aoc
+     * @return Vins
+     */
+    public function setAoc($aoc)
+    {
+        $this->aoc = $aoc;
+
+        return $this;
+    }
+
+    /**
+     * Get aoc
+     *
+     * @return string 
+     */
+    public function getaoc()
+    {
+        return $this->aoc;
     }
 }

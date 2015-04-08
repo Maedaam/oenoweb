@@ -5,12 +5,12 @@ namespace Oenoweb\OenowebBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Millesime
+ * CaracteristiqueVins
  *
- * @ORM\Table("millesime")
- * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Repository\MillesimeRepository")
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Oenoweb\OenowebBundle\Entity\CaracteristiqueVinsRepository")
  */
-class Millesime
+class CaracteristiqueVins
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class Millesime
     /**
      * @var integer
      *
-     * @ORM\Column(name="annee", type="integer")
+     * @ORM\Column(name="id_user", type="integer")
      */
-    private $annee;
+    private $idUser;
 
     /**
      * @var integer
@@ -47,33 +47,33 @@ class Millesime
     }
 
     /**
-     * Set annee
+     * Set idUser
      *
-     * @param integer $annee
-     * @return Millesime
+     * @param integer $idUser
+     * @return CaracteristiqueVins
      */
-    public function setAnnee($annee)
+    public function setIdUser($idUser)
     {
-        $this->annee = $annee;
+        $this->idUser = $idUser;
 
         return $this;
     }
 
     /**
-     * Get annee
+     * Get idUser
      *
      * @return integer 
      */
-    public function getAnnee()
+    public function getIdUser()
     {
-        return $this->annee;
+        return $this->idUser;
     }
 
     /**
      * Set idVin
      *
      * @param integer $idVin
-     * @return Millesime
+     * @return CaracteristiqueVins
      */
     public function setIdVin($idVin)
     {
