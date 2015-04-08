@@ -13,7 +13,7 @@ class RechercheDidactiqueRestController extends Controller {
 		$em=$this->getDoctrine()->getManager();
 
 		$query = $em->createQuery(
-		'SELECT distinct a.region
+		'SELECT distinct a.region 
 		FROM OenowebBundle:Vins a
 		ORDER BY a.region ASC'
 		);
@@ -32,7 +32,7 @@ class RechercheDidactiqueRestController extends Controller {
 		WHERE a.region = :parametre
 		ORDER BY a.aoc ASC'
 		)->setParameter('parametre' , $region );
-
+  
   		$listelement = $query->getResult(); 
 
     	return $listelement;
@@ -76,7 +76,6 @@ class RechercheDidactiqueRestController extends Controller {
 
     	return $listelement;
 	}
-
 
 
 }

@@ -35,3 +35,8 @@ avisgetnomuser :
   type : rest
   resource :     "OenowebBundle:AfficherAvisUserRest"
   name_prefix :  api_
+
+synchro :
+  type : rest
+  resource : "OenowebBundle:SynchronisationRest"
+  name_prefis : api_
