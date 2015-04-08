@@ -97,6 +97,20 @@ class FonctionSocialeRestController extends Controller  {
 		return $listelement;
 	}
 
+	public function getFavorisUserAction($idUser){
+		$em=$this->getDoctrine()->getManager();
+
+		$query = $em->createQuery(
+		'SELECT distinct a
+		FROM OenowebBundle:Favoris a
+		WHERE a.idUser = :parametre'
+		)->setParameter('parametre' , $idUser );
+
+		$listelement = $query->getResult(); 
+
+		return $listelement;
+	}
+
 	public function getUserAction($username){
 	    $user = $this->getDoctrine()
 	    ->getRepository('OenowebBundle:Users')
