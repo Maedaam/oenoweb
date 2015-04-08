@@ -12,21 +12,63 @@ class RechercheDidactiqueRestController extends Controller {
 	public function getSynchroAction(){
 		$em=$this->getDoctrine()->getManager();
 
-		$queryVins = $em->createQuery(
-		'SELECT a
-		FROM OenowebBundle:Vins a'
-		);
-
-  		$vins = $queryVins->getResult(); 
-
-		$queryAvis = $em->createQuery(
+		$query = $em->createQuery(
 		'SELECT a
 		FROM OenowebBundle:Avis a'
 		);
 
-		$avis = $queryAvis->getResult(); 
+  		$avis = $query->getResult(); 
 
-    	return array($vins, $avis);
+		$queryAvis = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:Caracteristique a'
+		);
+
+		$caracteristique = $queryAvis->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:CaracteristiqueVins a'
+		);
+
+		$caracteristiqueVins = $queryAvis->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:Cepage a'
+		);
+
+		$cepage = $query->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:CepageVins a'
+		);
+
+		$cepagevins = $query->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:Favoris a'
+		);
+
+		$favoris = $query->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:Users a'
+		);
+
+		$users = $query->getResult(); 
+
+		$query = $em->createQuery(
+		'SELECT a
+		FROM OenowebBundle:Vins a'
+		);
+
+		$vins= $query->getResult(); 
+
+    	return array($avis, $caracteristique, $caracteristiqueVins, $cepage, $cepagevins, $favoris, $users, $vins);
 	}
 
 	}
