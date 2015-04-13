@@ -13,7 +13,7 @@ class RechercheDidactiqueRestController extends Controller {
 		$em=$this->getDoctrine()->getManager();
 
 		$query = $em->createQuery(
-		'SELECT distinct a.region 
+		'SELECT distinct a
 		FROM OenowebBundle:Vins a
 		ORDER BY a.region ASC'
 		);
@@ -27,7 +27,7 @@ class RechercheDidactiqueRestController extends Controller {
   		$em=$this->getDoctrine()->getManager();
 
  		$query = $em->createQuery(
- 		'SELECT distinct a.aoc
+ 		'SELECT distinct a
 		FROM OenowebBundle:Vins a
 		WHERE a.region = :parametre
 		ORDER BY a.aoc ASC'
@@ -42,7 +42,7 @@ class RechercheDidactiqueRestController extends Controller {
   		$em=$this->getDoctrine()->getManager();
 
   		$query = $em->createQuery(
-  		'SELECT distinct a.domaine
+  		'SELECT distinct a
   		FROM OenowebBundle:Vins a
   		WHERE a.region  = :parametre
   		AND a.aoc = :parametre2
@@ -61,7 +61,7 @@ class RechercheDidactiqueRestController extends Controller {
 		$em=$this->getDoctrine()->getManager();
 
 		$query = $em->createQuery(
-		'SELECT OenowebBundle:Vins a, b.nom
+		'SELECT a , b 
 		FROM OenowebBundle:Vins a, OenowebBundle:Cepage b, OenowebBundle:CepageVins c
 		WHERE a.region  = :parametre1
 		AND a.aoc = :parametre2
