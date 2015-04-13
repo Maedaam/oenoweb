@@ -10,4 +10,13 @@ php app/console doctrine:database:create
 
 php app/console doctrine:schema:update
 
-#mysql --user=****** --password=****** db_nom < /Chemin/Vers/fichier_dump.SQL
+echo "Entrez votre pseudo pour l'accès à la base de donnée : ?"
+read pseudo
+
+echo "Entrez votre mot de passe (bdd) : ?"
+read -s pass
+
+echo "Entrez le nom que vous avez donné à la base de donnée du projet"
+read nom_base
+
+mysql --user=$pseudo --password=$pass $nom_base < BDD/base.de.donnee2.SQL
