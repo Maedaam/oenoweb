@@ -7,7 +7,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
 
 
-class RechercheDidactiqueRestController extends Controller {
+class SynchronisationRestController extends Controller {
 
 	public function getSynchroAction(){
 		$em=$this->getDoctrine()->getManager();
@@ -73,5 +73,3 @@ class RechercheDidactiqueRestController extends Controller {
 
 	}
 
-
-}
