@@ -22,3 +22,11 @@ synchro :
   type : rest
   resource : "OenowebBundle:SynchronisationRest"
   name_prefis : api_
+
+
+deleteavis :
+  type : rest
+  resource : "OenowebBundle:DeleteAvisRest"
+  name_prefix : api_
+  requirements :
+    _method: DELETE|GET
