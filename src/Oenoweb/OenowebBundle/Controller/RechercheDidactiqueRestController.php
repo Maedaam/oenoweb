@@ -9,6 +9,10 @@ use FOS\RestBundle\Controller\Annotations\RouteResource;
 
 class RechercheDidactiqueRestController extends Controller {
 
+/*
+*	Fonction permettant de sortir la liste des régions
+*	route : /api/regions.{_format}
+*/
 	public function getRegionsAction(){
 		$em=$this->getDoctrine()->getManager();
 
@@ -23,6 +27,11 @@ class RechercheDidactiqueRestController extends Controller {
 	    return $listRegion;
   	}
 
+/*
+*	Fonction permettant de récupérer la liste des aoc d'une région
+*	Le paramètre est le nom de la région
+*	route : api/regions/{region}.{_format} 
+*/
   	public function getRegionAction($region){
   		$em=$this->getDoctrine()->getManager();
 
@@ -38,6 +47,11 @@ class RechercheDidactiqueRestController extends Controller {
     	return $listelement;
  	}
 
+/*
+*	Fonction permettant de récupérer la liste des domaines d'une aoc
+*	Les paramètres sont : le nom de l'aoc et de sa région
+*	route : /api/regions/{region}/aocs/{paoc}.{_format} 
+*/
  	 public function getRegionAocAction($region , $paoc){
   		$em=$this->getDoctrine()->getManager();
 
@@ -57,6 +71,11 @@ class RechercheDidactiqueRestController extends Controller {
 	    return $listelement;
 	}
 
+/*
+*	Fonction permettant de lister les vins d'un domaine
+*	Les paramètres sont : le nom de la région, de l'aoc et du domaine du vins
+*	route : /api/regions/{pregion}/aocs/{paoc}/domaines/{pdomaine}.{_format} 
+*/
 	public function getRegionAocDomaineAction($pregion, $paoc, $pdomaine){
 		$em=$this->getDoctrine()->getManager();
 
