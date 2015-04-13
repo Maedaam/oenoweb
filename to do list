@@ -1,34 +1,7 @@
 POST:
 
-
-poster un avis
-retirer un avis
-afficher les avis relatif a un vins
-afficher les avis poster par un utilisateur
-ajouter un favoris
-retirer un favoris
-
-
-
-
-reorganiser controller dans 1/2 fichier
-
-	sur l'utilisateur :
-
-		crer un compte 
-
-		modifier mot de passe
-
-		changer email 
-
-		changer photo
-
-
 GET:
 fonction de recherche
-
-
-
 
 TO DO :
 
