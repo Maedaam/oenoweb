@@ -10,4 +10,4 @@ php app/console doctrine:database:create
 
 php app/console doctrine:schema:update
 
-
+#mysql --user=****** --password=****** db_nom < /Chemin/Vers/fichier_dump.SQL

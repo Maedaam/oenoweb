@@ -8,7 +8,10 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
 use Symfony\Component\HttpFoundation\Response;
 use Oenoweb\OenowebBundle\Entity\Avis;
+use Oenoweb\OenowebBundle\Entity\User2;
 use Oenoweb\OenowebBundle\Form\AvisType;
+use Oenoweb\OenowebBundle\Form\User2Type;
+
 
 class FonctionSocialeRestController extends Controller  {
 
@@ -69,7 +72,7 @@ class FonctionSocialeRestController extends Controller  {
 
 		$query = $em->createQuery(
 		'SELECT distinct a , b.username
-		FROM OenowebBundle:Avis a,  OenowebBundle:Users b
+		FROM OenowebBundle:Avis a,  OenowebBundle:User2 b
 		WHERE b.username = :parametre 
 		AND b.id = a.idUser
 		ORDER BY a.commentaire ASC'
@@ -120,6 +123,30 @@ class FonctionSocialeRestController extends Controller  {
 	      throw $this->createNotFoundException();
 	    }
 	    return $user;
+	}
+	public function postUser2Action(Request $request)
+	{
+	    $entity = new User2();
+	    $form = $this->createForm(new User2Type(), $entity);
+	    $form->bind($request);
+
+	    if ($form->isValid()) {
+	        $em = $this->getDoctrine()->getManager();
+	        $em->persist($entity);
+	        $em->flush();
+
+	        return $this->redirectView(
+	                $this->generateUrl(
+	                    'get_organisation',
+	                    array('id' => $entity->getId())
+	                    ),
+	                Codes::HTTP_CREATED
+	                );
+	    }
+
+	    return array(
+	        'form' => $form,
+	    );
 	}
 
 
