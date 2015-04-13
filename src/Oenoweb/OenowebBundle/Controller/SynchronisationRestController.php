@@ -68,7 +68,7 @@ class SynchronisationRestController extends Controller {
 
 		$vins= $query->getResult(); 
 
-    	return array($avis, $caracteristique, $caracteristiqueVins, $cepage, $cepagevins, $favoris, $users, $vins);
+    	return array($avis, $caracteristique, $caracteristiqueVins, $cepage, $cepagevins, $vins);
 	}
 
 	}
