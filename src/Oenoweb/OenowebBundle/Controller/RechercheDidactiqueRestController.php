@@ -61,11 +61,13 @@ class RechercheDidactiqueRestController extends Controller {
 		$em=$this->getDoctrine()->getManager();
 
 		$query = $em->createQuery(
-		'SELECT OenowebBundle:Vins
-		FROM OenowebBundle:Vins
+		'SELECT OenowebBundle:Vins a, b.nom
+		FROM OenowebBundle:Vins a, OenowebBundle:Cepage b, OenowebBundle:CepageVins c
 		WHERE a.region  = :parametre1
 		AND a.aoc = :parametre2
-		AND a.domaine = :parametre3'
+		AND a.domaine = :parametre3
+		AND a.id = c.idVins;
+		AND c.idCepage = b.id;'
 		)->setParameters(array(
     		'parametre1' => $pregion,
     		'parametre2' => $paoc,

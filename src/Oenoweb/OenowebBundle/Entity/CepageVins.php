@@ -26,7 +26,7 @@ class CepageVins
      *
      * @ORM\Column(name="id_user", type="integer")
      */
-    private $idUser;
+    private $idVins;
 
     /**
      * @var integer
@@ -47,26 +47,26 @@ class CepageVins
     }
 
     /**
-     * Set idUser
+     * Set idVins
      *
-     * @param integer $idUser
+     * @param integer $idVins
      * @return CepageVins
      */
-    public function setIdUser($idUser)
+    public function setIdVins($idVins)
     {
-        $this->idUser = $idUser;
+        $this->idVins = $idVins;
 
         return $this;
     }
 
     /**
-     * Get idUser
+     * Get idVins
      *
      * @return integer 
      */
-    public function getIdUser()
+    public function getIdVins()
     {
-        return $this->idUser;
+        return $this->idVins;
     }
 
     /**
