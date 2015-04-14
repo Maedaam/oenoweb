@@ -1,0 +1,22 @@
+Introduction : (2min)
+    Présentation du projet
+    Exposé de la problématique générale
+
+Présentation de pf et tutiquanti :  (4min)
+
+Présentation orale Oenoweb : (4min) 
+
+    Exposer la problematique du web service et comment on y a reponde.
+
+    Montrer fonction principale
+    Routes + image des xml (et json)
+
+    Techno utilisée.
+
+    Planning. A minima la liste des taches et repartition
+
+	Et ce qu'on a retenu du projet. et ce qu'il nous a apportè
+
+Conclusion :
+
+	C'etais de la balle ce projet domage que ce soit fini
